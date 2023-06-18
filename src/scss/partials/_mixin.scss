@@ -1,0 +1,5 @@
+@mixin back ($property:background-color, $duration: .2s, $t-function:linear){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $t-function;
+}

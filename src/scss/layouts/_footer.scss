@@ -1,0 +1,95 @@
+$primaryColor: rgba(0, 0, 0, 0.8);
+
+#deltastarbucks{
+    margin: 30px auto;
+    width: 50%;
+    text-align: center;
+    
+}
+
+#footer{
+    width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.486) 0 0px 3px 0px;
+
+    .contain{
+        margin: auto;
+        padding: 15px 40px 40px;
+        max-width: 1440px;
+        
+
+        .list{
+            display: flex;
+            justify-content: flex-start;
+            box-shadow: rgba(0, 0, 0, 0.486) 0 3px 3px -3px;
+
+            ul{
+                padding-right: 30px;
+                
+
+                p{
+                    font-size: 22.5px;
+                    margin-bottom: 24px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: rgba(0, 0, 0, 0.9);
+                }
+
+                li{
+                    list-style: none;
+                    display: block;
+                    
+
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: rgba(0, 0, 0, 0.6);
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        margin-bottom: 8px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 1.5;
+
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .icons{
+            font-size: 2rem;
+
+            i{
+                margin: 20px 10px;
+            }
+        }
+
+        .sugestions{
+            a{
+                display: inline-block;
+                font-size: 18px;
+                color: $primaryColor;
+                text-decoration: none;
+                padding: 3px 35px;
+                border-right: $primaryColor solid 1px ;
+
+                &:first-of-type{
+                    padding-left: 0;
+                }
+                &:last-of-type{
+                    border-right: none;
+                }
+            }
+        }
+
+        .c-company{
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+        }
+    }
+}

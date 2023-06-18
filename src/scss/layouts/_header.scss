@@ -1,0 +1,135 @@
+@mixin back ($property:background-color, $duration: .2s, $t-function:linear){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $t-function;
+} 
+
+/* mixin diger sassda işləmir, mapdə mixin yazılmayıb */
+
+#headnav {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    box-shadow: rgba(0, 0, 0, 0.486) 0 0px 3px 0px;
+
+    .logo {
+        display: flex;
+        justify-self: end;
+        position: relative;
+        z-index: 2;
+        width: 51px;
+        height: 51px;
+        margin: auto 40px auto 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .navbar {
+
+        position: relative;
+        z-index: 1;
+        width: calc(100vw - 171px);
+        height: 101px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .menu {
+            height: 100%;
+            /* cursor: pointer; */
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            font-size: 1rem;
+            font-weight: 700;
+            column-gap: 30px;
+
+            li {
+                list-style: none;
+                display: flex;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                    transition: color .2s;
+                }
+
+                a:hover {
+                    color: #006341;
+                }
+            }
+
+        }
+
+        .menu2 {
+            height: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            column-gap: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+            }
+
+            .findstore {
+                margin-right: 20px;
+                transition: color .2s;
+
+                span {
+                    vertical-align: sub;
+                    font-size: 20px;
+                }
+                &:hover {
+                    color: #006341;
+                }
+            }
+
+
+            .signin {
+                padding: 7px 16px;
+                border: 1px solid black;
+                border-radius: 50px;
+                @include back;
+
+                &:hover{
+                    background-color: rgb(0, 0, 0, 0.1);
+                }
+            }
+
+            .joinnow {
+                padding: 7px 16px;
+                border: 1px solid black;
+                border-radius: 50px;
+                background-color: rgba(0, 0, 0, 1);
+                color: #fff;
+                @include back;
+                
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 1611px){
+        .navbar{
+            width: 1440px;
+        }
+    }
+
+}
